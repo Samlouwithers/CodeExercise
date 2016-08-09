@@ -1,0 +1,124 @@
+@import "meyer-reset";
+
+//variables
+$blue: #474747;
+$background: #fff;
+$grey: #515151;
+
+$montserrat: Montserrat, sans-serif;
+$robo: Roboto, sans-serif;
+
+
+body {
+	width:100%;
+	margin: 20px auto;
+	background: $background;
+	font-family: $montserrat;
+	color: $blue;
+}
+
+.titleContainer {
+	width: 100%;
+	background: #1DA1DB;
+	border-top: 2px solid $grey;
+	border-bottom: 2px solid $grey;
+}
+	.title {
+		width: 80%;
+		margin: 20px auto;
+		text-align: left;
+	}
+
+.contextContainer {
+	padding: 40px;
+	margin: 20px auto; 
+}
+
+.testimonial {
+	background: #f4f4f4;
+}
+	.testimonial > div {
+		text-align: left;
+		width: 50%;
+		margin: 20px auto; 
+		font-weight: normal;
+		line-height: 1.6;
+	}
+
+		.testimonial > div > div {
+			border-left: 2px solid orange;
+			padding-left: 20px;
+		}
+
+	.testimonial span {
+		font-size: 14px;
+		font-weight: bold;
+		font-family: $robo;
+	}
+
+.quote {
+	background: #0F434C;
+	font-size: 12px;
+	color: #fff;
+	line-height: 1.6;
+}
+
+	.quote > section {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+		.quote > section p {
+			width: 70%;
+			display: block-inline;
+			float: left;
+			color: #ddd;
+		}
+
+		.quote > section a {
+			width: 15%;
+			display: block-inline;
+			float: right;
+			background: #1DA1DB;
+			padding: 20px;
+			margin: 40px 0;
+			white-space: nowrap;
+			text-align: center;
+			border-radius: 10px;
+
+		}
+
+
+.clearfix:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+     }
+.clearfix { display: inline-block; }
+/* start commented backslash hack \*/
+* html .clearfix { height: 1%; }
+.clearfix { display: block; }
+/* close commented backslash hack */
+
+
+h1 {
+  //font-family: Roboto, sans-serif;
+  font-family: Montserrat, sans-serif;
+  font-weight: normal;
+  color: #fff;
+  font-size: 18px;
+}
+
+.banner {
+  font-family: 'Pacifico', cursive;
+  height: 400px;
+  background-color: #ccc;
+}
+
+.container {
+  text-align: center;
+  font-family: 'Pacifico', cursive;
+}

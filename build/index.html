@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+    <head>
+        <meta charset="UTF-8">
+        <title>My App</title>
+        <link rel="stylesheet" type="text/css" href="css/main.css">
+        <!-- 'Montserrat' -->
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+<!-- 'Roboto Slab' -->
+<link href="https://fonts.googleapis.com/css?family=Roboto+Slab:300,400" rel="stylesheet">
+        <script src="/js/main.js"></script>
+    </head>
+    <body>
+        <div class="titleContainer">
+            <div class="title">
+                <div ng-controller="MainController">
+                    <h1>Exercise 1 - Testimonial Block</h1>
+                </div>
+            </div>
+        </div>
+        <div class="testimonial contextContainer">
+            <div ng-controller="testimonialController as testimonial">
+	<div>
+		<p>{{testimonial.opinion.description}}</p>
+		<span>{{testimonial.opinion.author}}</span>
+	</div>
+</div>
+        </div>
+
+        <div class="titleContainer">
+            <div class="title">
+                <h1>Exercise 2 - Quote CTA</h1>
+            </div>
+        </div>
+        <div class="quote contextContainer clearfix">
+            <section ng-controller="quoteController as saying">
+	<div>
+		<p>{{saying.quote.description}}</p>
+		<a>{{saying.quote.cta}}</a>
+	</div>
+</section>
+        </div>
+
+        <div class="titleContainer">
+            <div class="title">
+                <div ng-controller="MainController">
+                    <h1>Exercise 3 - Filterable Content</h1>
+                </div>
+            </div>
+        </div>
+
+            <div ng-controller="StoreController as store">
+                <div ng-repeat="product in store.products">
+                    <h1>{{product.name}}</h1>
+                    <h2>{{product.price}}</h1>
+                    <p>{{product.description}}</p>
+                    <button ng-show="store.product.canPurchase">Add to Cart</button>
+                </div>
+            </div>
+
+            <div ng-controller="moviesController" class="movie contextContainer clearfix">
+                <section ng-repeat="movie in movies">
+	<div>
+		<div>
+			<div>
+				<div>
+					<div>
+						<span>Genre</span>
+						<div>{{movie.title}}</div>
+					</div>
+					<div>
+						<span>Year</span>
+						<div>{{movie.year}}</div>
+					</div>
+					<div>
+						<input type="text">
+					</div>
+				</div>
+				<div>
+					<div>
+						<input type="radio">
+						<label>Movies</label>
+					</div>
+					<div>
+						<input type="radio">
+						<label>Books</label>
+					</div>
+					<div >
+						<a href="#">Clear filters</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div>
+		<div>
+			<div>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+</section>
+            </div>
+
+            <div ng-controller="moviesController">
+                <div ng-repeat="movie in movies">
+                    {{movie.title}}
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
